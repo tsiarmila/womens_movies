@@ -156,7 +156,7 @@ h1 {
 	 transform: rotateY(-180deg);
 }
  .back {
-	 background: #fff;
+	 background: #fcf3f0;
 	 transform: rotateY(-180deg);
 	 padding: 0 2em;
 }
@@ -176,7 +176,7 @@ h1 {
 .review {
     font-style: italic;
 }
- .movie_gens {
+.movie_gens {
 	 font-size: 11.5px;
 }
  .title {
