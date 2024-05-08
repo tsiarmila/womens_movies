@@ -1,0 +1,195 @@
+*, *:before, *:after {
+	 box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	background-color: #42261d;
+	background-attachment: fixed;
+ 	color: white;
+	overscroll-behavior: none;
+	text-align: center;
+  	overflow-x: hidden;
+}
+.container {
+	margin-top: 150px;
+	overflow: visible;
+	align-items: center;
+	text-align: center;
+	  width: 100%;
+}
+
+#wrapper {
+  overflow: hidden;
+  height: 100%;
+	  width: 100%;
+}
+
+#content {
+  overflow: visible;
+  width: 100%;
+  margin-top: 10%;
+
+  /*box-sizing: border-box; !* Чтобы ширина включала в себя отступы и границы *!*/
+}
+/*movie ranking*/
+.large {
+    font-size: 10rem;
+	opacity: 0.5;
+	translate: 200px 0;
+}
+
+p.overview {
+	font-size: 12px;
+	height: 200px;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+h1 {
+	padding: 50px;
+}
+
+.text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: termina, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 5vw;
+  text-align: center;
+  width: 100%;
+  /*transform: translateY(-100%);*/
+  /*z-index: 2;*/
+  color: white;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: white;
+  z-index: -2;
+}
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: white;
+  z-index: 2;
+}
+
+.filter-text {
+  mix-blend-mode: screen;
+  color: #804691;
+  z-index: 2;
+}
+ .description {
+	 width: 100%;
+	 margin-top: 3rem;
+	 margin-bottom: 3rem;
+	 font-size: large;
+}
+ .card {
+	 color: inherit;
+	 cursor: pointer;
+	 width: 338px;
+	 min-width: 270px;
+	 height: 500px;
+	 min-height: 400px;
+	 perspective: 1000px;
+	 margin: 5rem auto;
+	 position: relative;
+}
+ @media screen and (max-width: 800px) {
+	 .card {
+		 width: calc(50% - 3rem);
+	}
+}
+ @media screen and (max-width: 500px) {
+	 .card {
+		 width: calc(50% - 3rem);
+	}
+}
+ .front, .back {
+	 display: flex;
+	 border-radius: 6px;
+	 background-position: center;
+	 background-size: cover;
+	 text-align: center;
+	 justify-content: center;
+	 align-items: center;
+	 position: absolute;
+	 height: 100%;
+	 width: 100%;
+	 -webkit-backface-visibility: hidden;
+	 backface-visibility: hidden;
+	 transform-style: preserve-3d;
+	 transition: ease-in-out 600ms;
+	 color: #42261d;
+}
+ .front {
+	 background-size: cover;
+	 padding: 2rem;
+	 font-size: 1.618rem;
+	 font-weight: 600;
+	 color: #fff;
+	 overflow: visible;
+	 font-family: Poppins, sans-serif;
+}
+ .front:before {
+	 position: absolute;
+	 display: block;
+	 content: '';
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 /*background: linear-gradient(135deg, #1a9be6, #1a57e6);*/
+	 /*opacity: 0.25;*/
+	 z-index: -1;
+}
+ .card:hover .front {
+	 transform: rotateY(180deg);
+}
+ .card:nth-child(even):hover .front {
+	 transform: rotateY(-180deg);
+}
+ .back {
+	 background: #fff;
+	 transform: rotateY(-180deg);
+	 padding: 0 2em;
+}
+ .card:hover .back {
+	 transform: rotateY(0deg);
+}
+ .card:nth-child(even) .back {
+	 transform: rotateY(180deg);
+}
+ .card:nth-child(even):hover .back {
+	 transform: rotateY(0deg);
+}
+
+.rating {
+    color: #E4BB23;
+}
+.review {
+    font-style: italic;
+}
+ .movie_gens {
+	 font-size: 11.5px;
+}
+ .title {
+	 font-weight: bold;
+}
+ .release_date {
+	 font-weight: normal;
+}
+
+footer {
+	/*position: fixed;*/
+	/*bottom: 0;*/
+	width: 100%;
+	height: 50px;
+	background: linear-gradient(180deg, #42261d, white);
+}

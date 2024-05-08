@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Top 10 Women's Movies</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+<div class="container">
+  <h1 class="text">MY TOP 10 WOMEN's MOVIES</h1>
+  <h1 aria-hidden="true" class="text outline-text">MY TOP 10 WOMEN's MOVIES</h1>
+  <h1 aria-hidden="true" class="text filter-text">MY TOP 10 WOMEN's MOVIES</h1>
+<!--  <p class="description">Here are my all-time favorite movies that every woman should watch.</p>-->
+
+  <div id="wrapper">
+    <section id="content"></section>
+  </div>
+</div>
+
+
+<footer>Made by Mila</footer>
+
+<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="milatsiar" data-description="Support me on Buy me a coffee!" data-message="Thanks for Support!" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        gsap.registerPlugin(ScrollTrigger)
+        let skewSetter = gsap.quickTo("#wrapper", "skewY"), // fast
+	      clamp = gsap.utils.clamp(-5, 5);
+
+        gsap.to('#wrapper', {
+            // rotation: 360,
+            // duration: 2,
+            scrollTrigger: {
+                trigger: '#wrapper',
+                // markers: true,
+                // scrub: true,
+                effects: true,
+            onUpdate: self => skewSetter(clamp(self.getVelocity() / -50)),
+            onStop: () => skewSetter(0)
+            }
+        })
+    })
+</script>
+
+</body>
+</html>
+
+<script>
+const movies = [
+      {
+          img_url: "images/about_time.webp",
+          ranking: "1",
+          title: "About Time",
+          year: "2013",
+          rating: "10",
+          review: "The life of my dreams",
+          description: "The night after another unsatisfactory New Year's party, Tim's father tells his son that the men in his family have always had the ability to travel through time. They can't change history, but they can change what happens and has happened in their own lives. Thus begins the start of a lesson in learning to appreciate life itself as it is, as it comes, and most importantly, the people living alongside us."
+      },
+      {
+        img_url: "images/pride_and.webp",
+        ranking: "2",
+        title: "Pride & Prejudice",
+        year: "2005",
+        rating: "9.9",
+        review: "Elegant",
+        description: "A story of love and life among the landed English gentry during the Georgian era. Mr. Bennet is a gentleman living in Hertfordshire with his overbearing wife and five daughters, but if he dies their house will be inherited by a distant cousin whom they have never met, so the family's future happiness and security is dependent on the daughters making good marriages."
+      },
+      {
+        img_url: "images/eat_pray.webp",
+        ranking: "3",
+        title: "Eat Pray Love",
+        year: "2010",
+        rating: "9.8",
+        review: "She've found",
+        description: "Liz Gilbert had everything a woman is supposed to dream of having – a husband, a house and a successful career – yet like so many others, she found herself lost and searching for what she really wanted in life. Newly divorced, Gilbert steps out of her comfort zone, risking everything to change her life, embarking on a journey around the world that becomes a quest for self-discovery. She discovers the true pleasure of nourishment by eating in Italy, the power of prayer in India and, finally and unexpectedly, the inner peace and balance of true love in Bali."
+      },
+      {
+        img_url: "images/lake_house.png",
+        ranking: "4",
+        title: "The Lake House",
+        year: "2006",
+        rating: "9.7",
+        review: "A touching movie",
+        description: "Kate Forster, after breaking up with her boyfriend, decides to move in order to start from scratch, and at the same time be closer to work. She leaves a letter in the mailbox for the next tenant, explaining some of the nuances. The new tenant turns out to be Alex Wyler, a lonely architect whose father built this beautiful house. He reads the message, but cannot understand why Kate's description does not match reality."
+      },
+      {
+        img_url: "images/other_woman.webp",
+        ranking: "5",
+        title: "The Other Woman",
+        year: "2014",
+        rating: "9.6",
+        review: "Be afraid of me",
+        description: "After discovering her boyfriend is married, Carly soon meets the wife he's been cheating on. And when yet another affair is discovered, all three women team up to plot mutual revenge on the three-timing SOB."
+      },
+      {
+        img_url: "images/fools_gold.webp",
+        ranking: "6",
+        title: "Fool's Gold",
+        year: "2008",
+        rating: "9.5",
+        review: "Cute couple",
+        description: "Treasure hunter Ben 'Finn' Finnegan has sunk his marriage to Tess and his trusty boat in his obsessive quest to find the legendary Queen's Dowry. When he finds a vital clue that may finally pinpoint the treasure's whereabouts, he drags Tess and her boss, billionaire Nigel Honeycutt, along on the hunt. But Finn is not the only one interested in the gold; his former mentor-turned-enemy Moe Fitch, hired by rapper-turned-gangster Bigg Bunny, will stop at nothing to beat him to it."
+      },
+      {
+        img_url: "images/Think_like.png",
+        ranking: "7",
+        title: "Think Like A Man",
+        year: "2012",
+        rating: "9.4",
+        review: "Let the mind games begin",
+        description: "The balance of power in four couples’ relationships is upset when the women start using the advice in Steve Harvey’s book, Act Like A Lady, Think Like A Man, to get more of what they want from their men. When the men realize that the women have gotten a hold of their relationship “playbook,” they decide that the best defense is a good offense and come up with a plan to use this information to their advantage."
+      },
+      {
+        img_url: "images/ugly.webp",
+        ranking: "8",
+        title: "The Ugly Truth",
+        year: "2009",
+        rating: "9.3",
+        review: "The secret is simple",
+        description: "A romantically challenged morning show producer is reluctantly embroiled in a series of outrageous tests by her chauvinistic correspondent to prove his theories on relationships and help her find love. His clever ploys, however, lead to an unexpected result."
+      },
+      {
+        img_url: " ",
+        ranking: "9",
+        title: "The Ugly Truth",
+        year: "2009",
+        rating: "9.2",
+        review: "The secret is simple",
+        description: "The most int"
+      },
+      {
+        img_url: "",
+        ranking: "10",
+        title: "The Ugly Truth",
+        year: "2009",
+        rating: "9.1",
+        review: "The secret is simple",
+        description: "The most int"
+      }
+  ];
+  const contentSection = document.getElementById('content');
+
+    movies.forEach(movie => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+            <div class="front" style="background-image: url('${movie.img_url}');">
+                <p class="large">${movie.ranking}</p>
+            </div>
+            <div class="back">
+                <div>
+                    <div class="title">${movie.title} <span class="release_date">(${movie.year})</span></div>
+                    <div class="rating">
+                        <label>${movie.rating}</label>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="review">"${movie.review}"</p>
+                    <p class="overview">${movie.description}</p>
+                </div>
+            </div>
+        `;
+        contentSection.appendChild(card);
+    });
+</script>
