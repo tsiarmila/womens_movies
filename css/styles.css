@@ -36,9 +36,9 @@ body {
 }
 /*movie ranking*/
 .large {
-    font-size: 10rem;
+    font-size: 7rem;
 	opacity: 0.5;
-	translate: 200px 0;
+	translate: 180px 0;
 }
 
 p.overview {
@@ -98,7 +98,7 @@ h1 {
 	 height: 500px;
 	 min-height: 400px;
 	 perspective: 1000px;
-	 margin: 5rem auto;
+	 margin: 1rem auto;
 	 position: relative;
 }
  @media screen and (max-width: 800px) {
@@ -120,7 +120,7 @@ h1 {
 	 justify-content: center;
 	 align-items: center;
 	 position: absolute;
-	 height: 100%;
+	 height: 90%;
 	 width: 100%;
 	 -webkit-backface-visibility: hidden;
 	 backface-visibility: hidden;
@@ -192,4 +192,6 @@ footer {
 	width: 100%;
 	height: 50px;
 	background: linear-gradient(180deg, #42261d, white);
+  font-family: Poppins, sans-serif;
+	color: #bf951d;
 }
